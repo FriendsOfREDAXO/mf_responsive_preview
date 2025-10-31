@@ -1,13 +1,13 @@
-package: mf_responsive_preview
+package: responsive_preview
 version: '1.0.1'
 author: 'FriendsOfREDAXO'
-supportpage: https://github.com/FriendsOfREDAXO/mf_responsive_preview
+supportpage: https://github.com/FriendsOfREDAXO/responsive_preview
 compile: 0
 
 page:
   hidden: true
   title: 'Responsive-Preview'
-  perm: mf_responsive_preview[]
+  perm: responsive_preview[]
   pjax: true
   icon: rex-icon fa fa-expand
 pages:

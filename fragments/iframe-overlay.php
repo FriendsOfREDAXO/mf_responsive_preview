@@ -41,7 +41,7 @@ $full_url   = rex_yrewrite::getFullUrlByArticleId($article_id,$clang)
     <!--<h2 class="article-title"><?= rex_article::get($article_id)->getName() ?></h2>-->
     <a href="javascript:void(0)" class="close-btn" onclick="closePreview()">&times;</a>
     <iframe
-        data-src="../assets/addons/mf_responsive_preview/vendor/previewer/index.php?article_id=<?= $article_id ?>&clang=<?= $clang ?>&url=<?= $full_url ?>"
+        data-src="../assets/addons/responsive_preview/vendor/previewer/index.php?article_id=<?= $article_id ?>&clang=<?= $clang ?>&url=<?= $full_url ?>"
         width="100%"
         height="100%"
     style="border: none;">

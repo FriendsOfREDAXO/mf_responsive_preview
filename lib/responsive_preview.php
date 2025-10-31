@@ -1,12 +1,14 @@
 <?php
 
+namespace FriendsOfRedaxo\ResponsivePreview;
+
 class responsive_preview
 {
     public static function get($ep)
     {
         $subject = $ep->getSubject();
-        $iframe_overlay = new rex_fragment();
-        $title = rex_i18n::msg('mf_responsive_preview_title');
+        $iframe_overlay = new \rex_fragment();
+        $title = \rex_i18n::msg('responsive_preview_title');
         $text = <<<HTML
                     <span
                     style="cursor:pointer"
@@ -39,11 +41,11 @@ class responsive_preview
                 HTML;
         $iframe_overlay->setVar('article_id',$ep->getParam('article_id'));
         $iframe_overlay->setVar('clang',$ep->getParam('clang'));
-        $iframe_overlay->setVar('url', rex_getUrl($ep->getParam('article_id'), $ep->getParam('clang')));
+        $iframe_overlay->setVar('url', \rex_getUrl($ep->getParam('article_id'), $ep->getParam('clang')));
         $text .= $iframe_overlay->parse('iframe-overlay.php');
 
-        $fragment = new rex_fragment();
-        $fragment->setVar('title', rex_i18n::msg('mf_responsive_preview_title'), false);
+        $fragment = new \rex_fragment();
+        $fragment->setVar('title', \rex_i18n::msg('responsive_preview_title'), false);
         $fragment->setVar('body', $text, false);
         $fragment->setVar('collapse', false); // das Feld erhält eine Akkordeon-Funktion
         #$fragment->setVar('collapsed', true); // das Feld ist erstmal zusammengeklappt, bei false ist es ausgeklappt
