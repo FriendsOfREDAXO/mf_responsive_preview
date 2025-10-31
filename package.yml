@@ -1,6 +1,7 @@
 package: mf_responsive_preview
 version: '1.0.1'
-author: 'Daniel Springer | Medienfeuer'
+author: 'FriendsOfREDAXO'
+supportpage: https://github.com/FriendsOfREDAXO/mf_responsive_preview
 compile: 0
 
 page:
@@ -14,5 +15,6 @@ pages:
 
 requires:
     packages:
-    
     redaxo: '>=5.10'
+    php:
+        version: '>=8.1, <9'
